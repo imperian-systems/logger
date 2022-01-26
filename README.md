@@ -3,11 +3,23 @@
 ## Usage
 
 ```
-import Logger from '@imperian-systems/logger'
+import Logger, { SourceType, MessageType, LogLevels } from "@imperian-systems/logger";
 
-const Log = new Logger("https://logserver.com");
+const source: SourceType = {
+  client_name: "Imperian",
+  platform: "Linux",
+  type: "JavaScript",
+  name: "Tim's app",
+  detail: "Test from index.ts",
+};
 
-Log.record({
-  "message": "Hello, world!"
-});
+const logger = new Logger(source);
+
+const message: MessageType = {
+  status: "SUCCESS",
+  log_level: LogLevels.INFO,
+  message: "Hello, world!",
+};
+
+logger.record(message);
 ```
