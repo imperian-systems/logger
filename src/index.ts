@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 
 const LOG_VERSION = 2;
-const LOG_URL = "https://api.imperian.systems/api/log/json";
 
 export enum LogLevels {
   WARNING = "WARNING",
@@ -42,7 +41,7 @@ class Logger {
   url: string;
   source: SourceType;
 
-  constructor(source: SourceType, url = LOG_URL) {
+  constructor(source: SourceType, url) {
     this.source = source;
     this.url = url;
   }

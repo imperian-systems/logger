@@ -13,7 +13,7 @@ const source: SourceType = {
   detail: "Test from index.ts",
 };
 
-const logger = new Logger(source);
+const logger = new Logger(source, "https://logserver/api/logs");
 
 const message: MessageType = {
   status: "SUCCESS",
