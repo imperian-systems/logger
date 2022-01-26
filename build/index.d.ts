@@ -24,7 +24,7 @@ export interface MessageType {
 declare class Logger {
     url: string;
     source: SourceType;
-    constructor(source: SourceType, url?: string);
+    constructor(source: SourceType, url: any);
     record: (message: MessageType) => void;
 }
 export default Logger;

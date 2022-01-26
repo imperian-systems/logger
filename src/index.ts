@@ -63,7 +63,4 @@ class Logger {
   }
 }
 
-const logger = new Logger({ client_name: "Imperian", platform: "Linode", type: "JavaScript", name: "Tim's app", detail: "Test from index.ts" });
-logger.record({ status: "SUCCESS", log_level: LogLevels.INFO, message: "Hello, world!" });
-
 export default Logger;
