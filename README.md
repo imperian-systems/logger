@@ -3,7 +3,7 @@
 ## Usage
 
 ```
-import Logger, { SourceType, MessageType, LogLevels } from "@imperian-systems/logger";
+import Logger, { SourceType, MessageType, LogLevels, Status } from "@imperian-systems/logger";
 
 const source: SourceType = {
   client_name: "Imperian",
@@ -16,7 +16,8 @@ const source: SourceType = {
 const logger = new Logger(source, "https://logserver/api/logs");
 
 const message: MessageType = {
-  status: "SUCCESS",
+  attempt: 1,
+  status: Status.SUCCESS,
   log_level: LogLevels.INFO,
   message: "Hello, world!",
 };

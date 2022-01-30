@@ -9,6 +9,12 @@ export enum LogLevels {
   INFO = "INFO",
 }
 
+export enum Status {
+  SUCCESS = "SUCCESS",
+  FAIL = "FAIL",
+  INFO = "INFO",
+}
+
 export interface SourceType {
   /** Customer identifier */
   client_name: string;
@@ -26,9 +32,16 @@ export interface SourceType {
 }
 
 export interface MessageType {
-  status: string;
+  /** Attempt number */
+  attempt: number;
+
+  status: Status;
+
   log_level: LogLevels;
+
   message: string;
+
+  /** Additional details (optional) */
   content?: any;
 }
 

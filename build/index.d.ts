@@ -4,6 +4,11 @@ export declare enum LogLevels {
     DEBUG = "DEBUG",
     INFO = "INFO"
 }
+export declare enum Status {
+    SUCCESS = "SUCCESS",
+    FAIL = "FAIL",
+    INFO = "INFO"
+}
 export interface SourceType {
     /** Customer identifier */
     client_name: string;
@@ -16,9 +21,12 @@ export interface SourceType {
     detail: string;
 }
 export interface MessageType {
-    status: string;
+    /** Attempt number */
+    attempt: number;
+    status: Status;
     log_level: LogLevels;
     message: string;
+    /** Additional details (optional) */
     content?: any;
 }
 declare class Logger {

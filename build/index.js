@@ -7,6 +7,12 @@ export var LogLevels;
     LogLevels["DEBUG"] = "DEBUG";
     LogLevels["INFO"] = "INFO";
 })(LogLevels || (LogLevels = {}));
+export var Status;
+(function (Status) {
+    Status["SUCCESS"] = "SUCCESS";
+    Status["FAIL"] = "FAIL";
+    Status["INFO"] = "INFO";
+})(Status || (Status = {}));
 class Logger {
     constructor(source, url) {
         this.record = (message) => {

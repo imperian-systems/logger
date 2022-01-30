@@ -1,11 +1,12 @@
 {
   "name": "@imperian-systems/logger",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "author": "Tim Schwartz <tim.schwartz@imperiansystems.com>",
   "license": "UNLICENSED",
